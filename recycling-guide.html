@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Guide - EcoRecycle</title>
+    <link rel="stylesheet" href="recycling-guide.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Logo-removebg-preview.png" alt="Avartan Logo" class="logo-img">
+                <span>Avartan</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <a href="recycling-guide.html" class="nav-link active">
+                    <i class="fas fa-info-circle"></i>
+                    Recycling Guide
+                </a>
+                <a href="#schedule" class="nav-link">
+                    <i class="fas fa-calendar"></i>
+                    Schedule
+                </a>
+                <a href="#rewards" class="nav-link">
+                    <i class="fas fa-gift"></i>
+                    Rewards
+                </a>
+                <a href="#profile" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+            
+            <div class="nav-user">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=U" alt="User" class="user-avatar">
+                    <span class="user-name">Welcome, User!</span>
+                </div>
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Complete Recycling Guide</h1>
+                <p>Learn how to properly recycle different materials and segregate waste for maximum environmental impact.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <i class="fas fa-recycle"></i>
+                        <span>6 Categories</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>50+ Tips</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-leaf"></i>
+                        <span>Eco-Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="quick-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-target="plastics">
+                    <i class="fas fa-wine-bottle"></i>
+                    Plastics
+                </button>
+                <button class="nav-tab" data-target="paper">
+                    <i class="fas fa-newspaper"></i>
+                    Paper
+                </button>
+                <button class="nav-tab" data-target="metal">
+                    <i class="fas fa-can-food"></i>
+                    Metal
+                </button>
+                <button class="nav-tab" data-target="glass">
+                    <i class="fas fa-wine-glass"></i>
+                    Glass
+                </button>
+                <button class="nav-tab" data-target="electronics">
+                    <i class="fas fa-mobile-alt"></i>
+                    Electronics
+                </button>
+                <button class="nav-tab" data-target="organic">
+                    <i class="fas fa-seedling"></i>
+                    Organic
+                </button>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <div class="content-sections">
+            <!-- Plastics Section -->
+            <section id="plastics" class="content-section active">
+                <div class="section-header">
+                    <div class="section-icon plastic">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <div class="section-info">
+                        <h2>Plastic Recycling Guide</h2>
+                        <p>Learn how to properly recycle different types of plastics and understand the recycling codes.</p>
+                    </div>
+                </div>
+
+                <div class="guide-content">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3><i class="fas fa-check-circle"></i> What to Recycle</h3>
+                            <ul>
+                                <li>Plastic bottles (water, soda, juice)</li>
+                                <li>Plastic containers (yogurt, margarine)</li>
+                                <li>Plastic bags and wraps</li>
+                                <li>Plastic food containers</li>
+                                <li>Plastic cleaning product bottles</li>
+                                <li>Plastic milk jugs</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-times-circle"></i> What NOT to Recycle</h3>
+                            <ul>
+                                <li>Plastic utensils</li>
+                                <li>Plastic straws</li>
+                                <li>Plastic toys</li>
+                                <li>Plastic hangers</li>
+                                <li>Plastic bags with food residue</li>
+                                <li>Styrofoam containers</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-tools"></i> Preparation Steps</h3>
+                            <ol>
+                                <li>Rinse containers thoroughly</li>
+                                <li>Remove caps and labels</li>
+                                <li>Flatten containers to save space</li>
+                                <li>Check for recycling symbols</li>
+                                <li>Separate by plastic type if required</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-info-circle"></i> Recycling Codes</h3>
+                            <div class="code-list">
+                                <div class="code-item">
+                                    <span class="code-number">1</span>
+                                    <span class="code-name">PET - Polyethylene Terephthalate</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-number">2</span>
+                                    <span class="code-name">HDPE - High-Density Polyethylene</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-number">3</span>
+                                    <span class="code-name">PVC - Polyvinyl Chloride</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-number">4</span>
+                                    <span class="code-name">LDPE - Low-Density Polyethylene</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-number">5</span>
+                                    <span class="code-name">PP - Polypropylene</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-number">6</span>
+                                    <span class="code-name">PS - Polystyrene</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Paper Section -->
+            <section id="paper" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon paper">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="section-info">
+                        <h2>Paper Recycling Guide</h2>
+                        <p>Discover how to properly recycle paper products and maximize their environmental benefits.</p>
+                    </div>
+                </div>
+
+                <div class="guide-content">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3><i class="fas fa-check-circle"></i> What to Recycle</h3>
+                            <ul>
+                                <li>Newspapers and magazines</li>
+                                <li>Office paper and envelopes</li>
+                                <li>Cardboard boxes</li>
+                                <li>Paper bags</li>
+                                <li>Junk mail and catalogs</li>
+                                <li>Paperboard (cereal boxes)</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-times-circle"></i> What NOT to Recycle</h3>
+                            <ul>
+                                <li>Waxed paper</li>
+                                <li>Paper towels and tissues</li>
+                                <li>Paper with food residue</li>
+                                <li>Sticky notes</li>
+                                <li>Shredded paper (check local rules)</li>
+                                <li>Paper with plastic coatings</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-tools"></i> Preparation Steps</h3>
+                            <ol>
+                                <li>Remove any plastic or metal attachments</li>
+                                <li>Flatten cardboard boxes</li>
+                                <li>Remove food residue</li>
+                                <li>Separate by paper type</li>
+                                <li>Keep paper dry and clean</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-leaf"></i> Environmental Impact</h3>
+                            <div class="impact-stats">
+                                <div class="impact-stat">
+                                    <i class="fas fa-tree"></i>
+                                    <div>
+                                        <h4>17 Trees</h4>
+                                        <p>Saved per ton of paper recycled</p>
+                                    </div>
+                                </div>
+                                <div class="impact-stat">
+                                    <i class="fas fa-tint"></i>
+                                    <div>
+                                        <h4>7,000 Gallons</h4>
+                                        <p>Water saved per ton</p>
+                                    </div>
+                                </div>
+                                <div class="impact-stat">
+                                    <i class="fas fa-bolt"></i>
+                                    <div>
+                                        <h4>4,000 kWh</h4>
+                                        <p>Energy saved per ton</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metal Section -->
+            <section id="metal" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon metal">
+                        <i class="fas fa-can-food"></i>
+                    </div>
+                    <div class="section-info">
+                        <h2>Metal Recycling Guide</h2>
+                        <p>Learn how to recycle aluminum, steel, and other metals effectively.</p>
+                    </div>
+                </div>
+
+                <div class="guide-content">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3><i class="fas fa-check-circle"></i> What to Recycle</h3>
+                            <ul>
+                                <li>Aluminum cans (soda, beer)</li>
+                                <li>Steel cans (food, soup)</li>
+                                <li>Aluminum foil and trays</li>
+                                <li>Metal lids and caps</li>
+                                <li>Empty aerosol cans</li>
+                                <li>Scrap metal</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-times-circle"></i> What NOT to Recycle</h3>
+                            <ul>
+                                <li>Paint cans with paint</li>
+                                <li>Propane tanks</li>
+                                <li>Electronics with metal</li>
+                                <li>Metal with sharp edges</li>
+                                <li>Contaminated metal</li>
+                                <li>Metal furniture</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-tools"></i> Preparation Steps</h3>
+                            <ol>
+                                <li>Rinse cans thoroughly</li>
+                                <li>Remove labels if possible</li>
+                                <li>Crush cans to save space</li>
+                                <li>Separate aluminum from steel</li>
+                                <li>Check for hazardous materials</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-recycle"></i> Recycling Process</h3>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Collection</h4>
+                                        <p>Metals are collected and sorted</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Processing</h4>
+                                        <p>Metals are cleaned and shredded</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Melting</h4>
+                                        <p>Metals are melted into new products</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Glass Section -->
+            <section id="glass" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon glass">
+                        <i class="fas fa-wine-glass"></i>
+                    </div>
+                    <div class="section-info">
+                        <h2>Glass Recycling Guide</h2>
+                        <p>Understand how to properly recycle glass containers and bottles.</p>
+                    </div>
+                </div>
+
+                <div class="guide-content">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3><i class="fas fa-check-circle"></i> What to Recycle</h3>
+                            <ul>
+                                <li>Glass bottles (wine, beer, soda)</li>
+                                <li>Glass jars (food, condiments)</li>
+                                <li>Clear, green, and brown glass</li>
+                                <li>Glass containers</li>
+                                <li>Glass packaging</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-times-circle"></i> What NOT to Recycle</h3>
+                            <ul>
+                                <li>Light bulbs</li>
+                                <li>Mirrors</li>
+                                <li>Window glass</li>
+                                <li>Ceramics</li>
+                                <li>Pyrex dishes</li>
+                                <li>Broken glass</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-tools"></i> Preparation Steps</h3>
+                            <ol>
+                                <li>Rinse thoroughly</li>
+                                <li>Remove caps and lids</li>
+                                <li>Separate by color if required</li>
+                                <li>Check for cracks or damage</li>
+                                <li>Keep glass clean and dry</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-palette"></i> Glass Colors</h3>
+                            <div class="color-guide">
+                                <div class="color-item clear">
+                                    <div class="color-sample"></div>
+                                    <span>Clear Glass</span>
+                                </div>
+                                <div class="color-item green">
+                                    <div class="color-sample"></div>
+                                    <span>Green Glass</span>
+                                </div>
+                                <div class="color-item brown">
+                                    <div class="color-sample"></div>
+                                    <span>Brown Glass</span>
+                                </div>
+                                <div class="color-item blue">
+                                    <div class="color-sample"></div>
+                                    <span>Blue Glass</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Electronics Section -->
+            <section id="electronics" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon electronics">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="section-info">
+                        <h2>Electronics Recycling Guide</h2>
+                        <p>Learn how to properly dispose of electronic waste and find recycling centers.</p>
+                    </div>
+                </div>
+
+                <div class="guide-content">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3><i class="fas fa-check-circle"></i> What to Recycle</h3>
+                            <ul>
+                                <li>Computers and laptops</li>
+                                <li>Mobile phones and tablets</li>
+                                <li>Televisions and monitors</li>
+                                <li>Printers and scanners</li>
+                                <li>Batteries (all types)</li>
+                                <li>Chargers and cables</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Why Recycle Electronics</h3>
+                            <ul>
+                                <li>Prevent toxic materials from landfills</li>
+                                <li>Recover valuable metals</li>
+                                <li>Reduce environmental pollution</li>
+                                <li>Conserve natural resources</li>
+                                <li>Create jobs in recycling industry</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-tools"></i> Preparation Steps</h3>
+                            <ol>
+                                <li>Backup and erase all data</li>
+                                <li>Remove batteries if possible</li>
+                                <li>Remove personal information</li>
+                                <li>Check for recycling programs</li>
+                                <li>Find certified e-waste recyclers</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-map-marker-alt"></i> Where to Recycle</h3>
+                            <div class="recycling-locations">
+                                <div class="location-item">
+                                    <i class="fas fa-store"></i>
+                                    <div>
+                                        <h4>Retail Stores</h4>
+                                        <p>Many electronics stores accept old devices</p>
+                                    </div>
+                                </div>
+                                <div class="location-item">
+                                    <i class="fas fa-building"></i>
+                                    <div>
+                                        <h4>Recycling Centers</h4>
+                                        <p>Specialized e-waste recycling facilities</p>
+                                    </div>
+                                </div>
+                                <div class="location-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <div>
+                                        <h4>Collection Events</h4>
+                                        <p>Community e-waste collection days</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Organic Section -->
+            <section id="organic" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon organic">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="section-info">
+                        <h2>Organic Waste Composting Guide</h2>
+                        <p>Learn how to compost organic waste and create nutrient-rich soil for your garden.</p>
+                    </div>
+                </div>
+
+                <div class="guide-content">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3><i class="fas fa-check-circle"></i> What to Compost</h3>
+                            <ul>
+                                <li>Fruit and vegetable scraps</li>
+                                <li>Coffee grounds and filters</li>
+                                <li>Tea bags</li>
+                                <li>Eggshells</li>
+                                <li>Grass clippings</li>
+                                <li>Leaves and yard waste</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-times-circle"></i> What NOT to Compost</h3>
+                            <ul>
+                                <li>Meat and fish scraps</li>
+                                <li>Dairy products</li>
+                                <li>Oils and fats</li>
+                                <li>Pet waste</li>
+                                <li>Diseased plants</li>
+                                <li>Weeds with seeds</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-tools"></i> Composting Steps</h3>
+                            <ol>
+                                <li>Choose a composting method</li>
+                                <li>Layer green and brown materials</li>
+                                <li>Keep compost moist but not wet</li>
+                                <li>Turn compost regularly</li>
+                                <li>Monitor temperature and progress</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-card">
+                            <h3><i class="fas fa-leaf"></i> Composting Methods</h3>
+                            <div class="composting-methods">
+                                <div class="method-item">
+                                    <i class="fas fa-home"></i>
+                                    <div>
+                                        <h4>Backyard Composting</h4>
+                                        <p>Traditional composting in your yard</p>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <i class="fas fa-worm"></i>
+                                    <div>
+                                        <h4>Vermicomposting</h4>
+                                        <p>Using worms to break down waste</p>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <i class="fas fa-recycle"></i>
+                                    <div>
+                                        <h4>Municipal Composting</h4>
+                                        <p>City-run composting programs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <h2>Pro Tips for Better Recycling</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Know Your Local Rules</h3>
+                    <p>Recycling rules vary by location. Check with your local recycling center for specific guidelines.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-broom"></i>
+                    <h3>Clean Before Recycling</h3>
+                    <p>Rinse containers thoroughly to prevent contamination and improve recycling quality.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-compress-alt"></i>
+                    <h3>Reduce and Reuse First</h3>
+                    <p>Remember the 3 R's: Reduce, Reuse, then Recycle. Minimize waste before recycling.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-sort"></i>
+                    <h3>Proper Separation</h3>
+                    <p>Separate materials correctly to ensure they can be processed efficiently.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Regular Collection</h3>
+                    <p>Set up a regular recycling schedule to make it a habit.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Educate Others</h3>
+                    <p>Share your knowledge with family and friends to spread recycling awareness.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Need Help with Recycling?</h2>
+            <p>Contact your local recycling center or use our resources to find the best way to recycle in your area.</p>
+            <div class="contact-buttons">
+                <button class="contact-btn" onclick="findRecyclingCenter()">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Find Recycling Centers
+                </button>
+                <button class="contact-btn" onclick="schedulePickup()">
+                    <i class="fas fa-truck"></i>
+                    Schedule Pickup
+                </button>
+                <button class="contact-btn" onclick="contactSupport()">
+                    <i class="fas fa-headset"></i>
+                    Contact Support
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="toast-message">Action completed successfully!</span>
+        </div>
+    </div>
+
+    <script src="recycling-guide.js"></script>
+</body>
+</html>

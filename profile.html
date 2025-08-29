@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EcoRecycle</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Logo-removebg-preview.png" alt="Avartan Logo" class="logo-img">
+                <span>Avartan</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <a href="recycling-guide.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    Recycling Guide
+                </a>
+                <a href="schedule.html" class="nav-link">
+                    <i class="fas fa-calendar"></i>
+                    Schedule
+                </a>
+                <a href="rewards.html" class="nav-link">
+                    <i class="fas fa-gift"></i>
+                    Rewards
+                </a>
+                <a href="profile.html" class="nav-link active">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+            
+            <div class="nav-user">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=U" alt="User" class="user-avatar">
+                    <span class="user-name">Welcome, User!</span>
+                </div>
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-cover">
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/120x120/4CAF50/ffffff?text=JD" alt="Profile" class="avatar-img">
+                    <button class="edit-avatar" onclick="editAvatar()">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <h1>John Doe</h1>
+                    <p class="user-title">Eco Warrior</p>
+                    <p class="user-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        San Francisco, CA
+                    </p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Items Recycled</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">450</span>
+                            <span class="stat-label">Points Earned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Rewards Redeemed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Navigation -->
+        <section class="profile-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="overview">
+                    <i class="fas fa-user"></i>
+                    Overview
+                </button>
+                <button class="nav-tab" data-tab="achievements">
+                    <i class="fas fa-trophy"></i>
+                    Achievements
+                </button>
+                <button class="nav-tab" data-tab="settings">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </button>
+            </div>
+        </section>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Overview Tab -->
+            <div class="tab-pane active" id="overview">
+                <div class="overview-grid">
+                    <!-- Personal Information -->
+                    <div class="info-card">
+                        <h3>Personal Information</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value">John Doe</span>
+                                <button class="edit-btn" onclick="editField('name')">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">john.doe@email.com</span>
+                                <button class="edit-btn" onclick="editField('email')">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+1 (555) 123-4567</span>
+                                <button class="edit-btn" onclick="editField('phone')">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recycling Stats -->
+                    <div class="stats-card">
+                        <h3>Recycling Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <i class="fas fa-recycle"></i>
+                                <div class="stat-content">
+                                    <h4>156</h4>
+                                    <p>Total Items Recycled</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-leaf"></i>
+                                <div class="stat-content">
+                                    <h4>23.4 kg</h4>
+                                    <p>CO2 Saved</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-tree"></i>
+                                <div class="stat-content">
+                                    <h4>3</h4>
+                                    <p>Trees Planted</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="activity-card">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <h4>Plastic & Paper Pickup</h4>
+                                    <p>Completed pickup on December 10, 2024</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <h4>Reward Redeemed</h4>
+                                    <p>Redeemed "Plant a Tree" reward</p>
+                                    <span class="activity-time">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Tab -->
+            <div class="tab-pane" id="achievements">
+                <div class="achievements-grid">
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>First Steps</h4>
+                            <p>Recycled your first item</p>
+                            <span class="achievement-date">Unlocked Dec 1, 2024</span>
+                        </div>
+                    </div>
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>On Fire</h4>
+                            <p>7-day recycling streak</p>
+                            <span class="achievement-date">Unlocked Dec 8, 2024</span>
+                        </div>
+                    </div>
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Eco Legend</h4>
+                            <p>Recycled 500 items</p>
+                            <span class="achievement-progress">156/500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-pane" id="settings">
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h3>Account Settings</h3>
+                        <div class="settings-list">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Email Notifications</h4>
+                                    <p>Receive updates about your recycling activity</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Change Password</h4>
+                                    <p>Update your account password</p>
+                                </div>
+                                <button class="action-btn small" onclick="changePassword()">
+                                    Change
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="toast-message">Action completed successfully!</span>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

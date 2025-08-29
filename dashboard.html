@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRecycle Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Logo-removebg-preview.png" alt="Avartan Logo" class="logo-img">
+                <span>Avartan</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#dashboard" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <a href="recycling-guide.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    Recycling Guide
+                </a>
+                <a href="schedule.html" class="nav-link">
+                    <i class="fas fa-calendar"></i>
+                    Schedule
+                </a>
+                <a href="rewards.html" class="nav-link">
+                    <i class="fas fa-gift"></i>
+                    Rewards
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+            
+            <div class="nav-user">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=U" alt="User" class="user-avatar">
+                    <span class="user-name">Welcome, User!</span>
+                </div>
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome to Avartan!</h1>
+                <p>Track your recycling progress and earn rewards for making the planet greener.</p>
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-leaf"></i>
+                        <div class="stat-info">
+                            <h3>127</h3>
+                            <p>Items Recycled</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-coins"></i>
+                        <div class="stat-info">
+                            <h3>450</h3>
+                            <p>Points Earned</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Days Streak</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Recent Activity -->
+            <section class="dashboard-card recent-activity">
+                <div class="card-header">
+                    <h2><i class="fas fa-clock"></i> Recent Activity</h2>
+                    <button class="view-all-btn" onclick="viewAllActivity()">View All</button>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon plastic">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Plastic Bottle Recycled</h4>
+                            <p>2 hours ago • +5 points</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon paper">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Paper Waste Recycled</h4>
+                            <p>1 day ago • +3 points</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon metal">
+                            <i class="fas fa-can-food"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Aluminum Can Recycled</h4>
+                            <p>2 days ago • +4 points</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recycling Progress -->
+            <section class="dashboard-card progress-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-chart-line"></i> Monthly Progress</h2>
+                </div>
+                <div class="progress-content">
+                    <div class="progress-circle">
+                        <svg width="120" height="120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#e0e0e0" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#4CAF50" stroke-width="8" 
+                                    stroke-dasharray="314" stroke-dashoffset="125" class="progress-ring"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="percentage">60%</span>
+                            <span class="label">Goal</span>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="progress-stat">
+                            <span class="stat-label">This Month</span>
+                            <span class="stat-value">127 items</span>
+                        </div>
+                        <div class="progress-stat">
+                            <span class="stat-label">Goal</span>
+                            <span class="stat-value">200 items</span>
+                        </div>
+                        <div class="progress-stat">
+                            <span class="stat-label">Remaining</span>
+                            <span class="stat-value">73 items</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="dashboard-card quick-actions">
+                <div class="card-header">
+                    <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+                </div>
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="schedulePickup()">
+                        <i class="fas fa-truck"></i>
+                        <span>Schedule Pickup</span>
+                    </button>
+                    <button class="action-btn" onclick="findRecyclingCenter()">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Find Center</span>
+                    </button>
+                    <button class="action-btn" onclick="scanItem()">
+                        <i class="fas fa-qrcode"></i>
+                        <span>Scan Item</span>
+                    </button>
+                    <button class="action-btn" onclick="redeemRewards()">
+                        <i class="fas fa-gift"></i>
+                        <span>Redeem Rewards</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Recycling Categories -->
+            <section class="dashboard-card categories">
+                <div class="card-header">
+                    <h2><i class="fas fa-tags"></i> Recycling Categories</h2>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <div class="category-icon plastic">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                        <div class="category-info">
+                            <h4>Plastic</h4>
+                            <p>45 items</p>
+                        </div>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon paper">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="category-info">
+                            <h4>Paper</h4>
+                            <p>32 items</p>
+                        </div>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon metal">
+                            <i class="fas fa-can-food"></i>
+                        </div>
+                        <div class="category-info">
+                            <h4>Metal</h4>
+                            <p>28 items</p>
+                        </div>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon glass">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                        <div class="category-info">
+                            <h4>Glass</h4>
+                            <p>22 items</p>
+                        </div>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Pickups -->
+            <section class="dashboard-card pickups">
+                <div class="card-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Upcoming Pickups</h2>
+                    <button class="schedule-btn" onclick="scheduleNewPickup()">Schedule New</button>
+                </div>
+                <div class="pickup-list">
+                    <div class="pickup-item">
+                        <div class="pickup-date">
+                            <span class="day">15</span>
+                            <span class="month">Dec</span>
+                        </div>
+                        <div class="pickup-details">
+                            <h4>Plastic & Paper Pickup</h4>
+                            <p>9:00 AM - 11:00 AM</p>
+                            <span class="pickup-status confirmed">Confirmed</span>
+                        </div>
+                    </div>
+                    <div class="pickup-item">
+                        <div class="pickup-date">
+                            <span class="day">22</span>
+                            <span class="month">Dec</span>
+                        </div>
+                        <div class="pickup-details">
+                            <h4>Mixed Recycling</h4>
+                            <p>2:00 PM - 4:00 PM</p>
+                            <span class="pickup-status pending">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Environmental Impact -->
+            <section class="dashboard-card impact">
+                <div class="card-header">
+                    <h2><i class="fas fa-globe"></i> Environmental Impact</h2>
+                </div>
+                <div class="impact-stats">
+                    <div class="impact-item">
+                        <i class="fas fa-tree"></i>
+                        <div class="impact-info">
+                            <h4>3.2 Trees Saved</h4>
+                            <p>Through paper recycling</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <div class="impact-info">
+                            <h4>12.5L Oil Saved</h4>
+                            <p>Through plastic recycling</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-bolt"></i>
+                        <div class="impact-info">
+                            <h4>45 kWh Saved</h4>
+                            <p>Through aluminum recycling</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="toast-message">Action completed successfully!</span>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

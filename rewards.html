@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards - EcoRecycle</title>
+    <link rel="stylesheet" href="rewards.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Logo-removebg-preview.png" alt="Avartan Logo" class="logo-img">
+                <span>Avartan</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <a href="recycling-guide.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    Recycling Guide
+                </a>
+                <a href="schedule.html" class="nav-link">
+                    <i class="fas fa-calendar"></i>
+                    Schedule
+                </a>
+                <a href="rewards.html" class="nav-link active">
+                    <i class="fas fa-gift"></i>
+                    Rewards
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+            
+            <div class="nav-user">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=U" alt="User" class="user-avatar">
+                    <span class="user-name">Welcome, User!</span>
+                </div>
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Your Rewards</h1>
+                <p>Redeem your recycling points for amazing rewards and exclusive offers.</p>
+                <div class="points-display">
+                    <div class="points-card">
+                        <i class="fas fa-coins"></i>
+                        <div class="points-info">
+                            <h2>450</h2>
+                            <p>Available Points</p>
+                        </div>
+                    </div>
+                    <div class="points-card">
+                        <i class="fas fa-trophy"></i>
+                        <div class="points-info">
+                            <h3>12</h3>
+                            <p>Rewards Redeemed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="action-buttons">
+                <button class="action-btn" onclick="showHistory()">
+                    <i class="fas fa-history"></i>
+                    <span>Redemption History</span>
+                </button>
+                <button class="action-btn" onclick="showLeaderboard()">
+                    <i class="fas fa-medal"></i>
+                    <span>Leaderboard</span>
+                </button>
+                <button class="action-btn" onclick="showEarnMore()">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Earn More Points</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Rewards Categories -->
+        <section class="categories-section">
+            <h2>Available Rewards</h2>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fas fa-star"></i>
+                    All Rewards
+                </button>
+                <button class="category-tab" data-category="eco">
+                    <i class="fas fa-leaf"></i>
+                    Eco Products
+                </button>
+                <button class="category-tab" data-category="gift">
+                    <i class="fas fa-gift"></i>
+                    Gift Cards
+                </button>
+                <button class="category-tab" data-category="discount">
+                    <i class="fas fa-percentage"></i>
+                    Discounts
+                </button>
+                <button class="category-tab" data-category="charity">
+                    <i class="fas fa-heart"></i>
+                    Charity Donations
+                </button>
+            </div>
+        </section>
+
+        <!-- Rewards Grid -->
+        <div class="rewards-grid">
+            <!-- Eco Products -->
+            <div class="reward-card" data-category="eco">
+                <div class="reward-image">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>Plant a Tree</h3>
+                    <p>Help us plant a tree in your name</p>
+                    <div class="reward-meta">
+                        <span class="points-required">100 points</span>
+                        <span class="reward-type">Eco Impact</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('Plant a Tree', 100)">
+                    Redeem
+                </button>
+            </div>
+
+            <div class="reward-card" data-category="eco">
+                <div class="reward-image">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>Reusable Water Bottle</h3>
+                    <p>Stainless steel eco-friendly bottle</p>
+                    <div class="reward-meta">
+                        <span class="points-required">200 points</span>
+                        <span class="reward-type">Physical Item</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('Reusable Water Bottle', 200)">
+                    Redeem
+                </button>
+            </div>
+
+            <div class="reward-card" data-category="eco">
+                <div class="reward-image">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>Organic Cotton Tote</h3>
+                    <p>Sustainable shopping bag</p>
+                    <div class="reward-meta">
+                        <span class="points-required">150 points</span>
+                        <span class="reward-type">Physical Item</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('Organic Cotton Tote', 150)">
+                    Redeem
+                </button>
+            </div>
+
+            <!-- Gift Cards -->
+            <div class="reward-card" data-category="gift">
+                <div class="reward-image">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>$5 Starbucks Gift Card</h3>
+                    <p>Enjoy your favorite coffee</p>
+                    <div class="reward-meta">
+                        <span class="points-required">250 points</span>
+                        <span class="reward-type">Digital Gift</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('$5 Starbucks Gift Card', 250)">
+                    Redeem
+                </button>
+            </div>
+
+            <div class="reward-card" data-category="gift">
+                <div class="reward-image">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>$10 Amazon Gift Card</h3>
+                    <p>Shop for anything you want</p>
+                    <div class="reward-meta">
+                        <span class="points-required">500 points</span>
+                        <span class="reward-type">Digital Gift</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('$10 Amazon Gift Card', 500)">
+                    Redeem
+                </button>
+            </div>
+
+            <!-- Discounts -->
+            <div class="reward-card" data-category="discount">
+                <div class="reward-image">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>20% Off Eco Store</h3>
+                    <p>Discount on sustainable products</p>
+                    <div class="reward-meta">
+                        <span class="points-required">300 points</span>
+                        <span class="reward-type">Discount Code</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('20% Off Eco Store', 300)">
+                    Redeem
+                </button>
+            </div>
+
+            <div class="reward-card" data-category="discount">
+                <div class="reward-image">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>15% Off Local Restaurant</h3>
+                    <p>Support local sustainable dining</p>
+                    <div class="reward-meta">
+                        <span class="points-required">200 points</span>
+                        <span class="reward-type">Discount Code</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('15% Off Local Restaurant', 200)">
+                    Redeem
+                </button>
+            </div>
+
+            <!-- Charity -->
+            <div class="reward-card" data-category="charity">
+                <div class="reward-image">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>Ocean Cleanup Donation</h3>
+                    <p>Help clean our oceans</p>
+                    <div class="reward-meta">
+                        <span class="points-required">100 points</span>
+                        <span class="reward-type">Charity</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('Ocean Cleanup Donation', 100)">
+                    Redeem
+                </button>
+            </div>
+
+            <div class="reward-card" data-category="charity">
+                <div class="reward-image">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="reward-content">
+                    <h3>Forest Conservation</h3>
+                    <p>Protect endangered forests</p>
+                    <div class="reward-meta">
+                        <span class="points-required">150 points</span>
+                        <span class="reward-type">Charity</span>
+                    </div>
+                </div>
+                <button class="redeem-btn" onclick="redeemReward('Forest Conservation', 150)">
+                    Redeem
+                </button>
+            </div>
+        </div>
+
+        <!-- Recent Redemptions -->
+        <section class="recent-redemptions">
+            <h2>Recent Redemptions</h2>
+            <div class="redemption-list">
+                <div class="redemption-item">
+                    <div class="redemption-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="redemption-details">
+                        <h4>Plant a Tree</h4>
+                        <p>Redeemed 2 days ago</p>
+                        <span class="redemption-status completed">Completed</span>
+                    </div>
+                </div>
+                <div class="redemption-item">
+                    <div class="redemption-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="redemption-details">
+                        <h4>$5 Starbucks Gift Card</h4>
+                        <p>Redeemed 1 week ago</p>
+                        <span class="redemption-status completed">Completed</span>
+                    </div>
+                </div>
+                <div class="redemption-item">
+                    <div class="redemption-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="redemption-details">
+                        <h4>Reusable Water Bottle</h4>
+                        <p>Redeemed 2 weeks ago</p>
+                        <span class="redemption-status shipped">Shipped</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Earn -->
+        <section class="earn-section">
+            <h2>How to Earn More Points</h2>
+            <div class="earn-grid">
+                <div class="earn-card">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Recycle Items</h3>
+                    <p>Earn 3-5 points per item recycled</p>
+                </div>
+                <div class="earn-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Daily Streak</h3>
+                    <p>Bonus points for consecutive days</p>
+                </div>
+                <div class="earn-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Refer Friends</h3>
+                    <p>50 points for each friend who joins</p>
+                </div>
+                <div class="earn-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Share on Social</h3>
+                    <p>10 points for social media sharing</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="toast-message">Action completed successfully!</span>
+        </div>
+    </div>
+
+    <script src="rewards.js"></script>
+</body>
+</html>
