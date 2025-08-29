@@ -1,8 +1,8 @@
-# 🌿 Avartan - Recycling Platform
+#  Avartan - Recycling Platform
 
 A modern, responsive web platform for tracking recycling progress, scheduling pickups, earning rewards, and learning about sustainable waste management.
 
-## 🚀 Features
+## Features
 
 - **User Authentication**: Login/Signup system
 - **Dashboard**: Track recycling progress and statistics
@@ -12,14 +12,14 @@ A modern, responsive web platform for tracking recycling progress, scheduling pi
 - **User Profile**: Track achievements and manage settings
 - **Responsive Design**: Works on all devices
 
-## 🎨 Design
+##  Design
 
 - **Color Palette**: Minimal aesthetic with eco-friendly colors
 - **Typography**: Clean, readable Inter font
 - **Icons**: Font Awesome integration
 - **Animations**: Smooth hover effects and transitions
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Recycling platform/
@@ -45,7 +45,7 @@ Recycling platform/
 └── README.md               # This file
 ```
 
-## 🌐 GitHub Pages Deployment
+## GitHub Pages Deployment
 
 ### Option 1: Simple GitHub Pages (Recommended)
 
@@ -103,7 +103,7 @@ Recycling platform/
 - Edge
 - Mobile browsers
 
-## 🎯 Key Technologies
+##  Key Technologies
 
 - **HTML5**: Semantic markup
 - **CSS3**: Modern styling with Flexbox/Grid
@@ -111,7 +111,7 @@ Recycling platform/
 - **Font Awesome**: Icon library
 - **Google Fonts**: Inter typography
 
-## 🌟 Features in Detail
+## Features in Detail
 
 ### Dashboard
 - Progress tracking
